@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
+// import java.util.Optional;
 
 class Student {
     private String name;
@@ -12,7 +12,7 @@ class Student {
     }
 
     public String getName() {
-        return name; 
+        return name;
     }
 
     public int getAge() {
@@ -32,45 +32,36 @@ class Student {
         return "Student [name=" + name + ", age=" + age + "]";
     }
 
-    
-
-    
-
 }
 
 public class OptionalEx {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        List<String> names =  Arrays.asList("Aman","Nishant","Parteek","Satyam","Ankit");
-
+        List<String> names = Arrays.asList("Aman", "Nishant", "Parteek", "Satyam", "Ankit");
 
         // String name = names.stream()
-        //                   .filter(str -> str.contains("ee"))
-        //                   .findAny()
-        //                   .orElse("Not Found");
+        // .filter(str -> str.contains("ee"))
+        // .findAny()
+        // .orElse("Not Found");
 
-        //                   System.out.println(name);
+        // System.out.println(name);
 
-
-        //Method Referance 
+        // Method Referance
 
         // List<String> uNames = names.stream()
-        //                     .map(String::toUpperCase) //Method Referance
-        //                     .toList();
+        // .map(String::toUpperCase) //Method Referance
+        // .toList();
 
         // uNames.forEach(System.out::println); //Method Referance
 
-        //Constructor Referance
+        // Constructor Referance
 
         List<Student> students = new ArrayList<>();
         students = names.stream()
-                        .map(Student::new) //Constructor Referance
-                        .toList();
+                .map(Student::new) // Constructor Referance
+                .toList();
 
         System.out.println(students);
 
-
-
-    }  
+    }
 }
-    
